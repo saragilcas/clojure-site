@@ -18,8 +18,7 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 * http://planet.clojure.in/[Planet Clojure] blog aggregator
 * #clojure IRC channel on https://libera.chat[Libera.Chat]
 * https://discord.gg/discljord[Discljord Clojure Discord Server]
-* https://twitter.com/i/communities/1494013093059432451[Twitter Community]
-* https://clj.social[Clojure Community on Fediverse]
+* https://discord.gg/MsejPv9JNG[Clojurians Discord Server]
 
 == Tutorials and Learning Materials
 
@@ -43,7 +42,6 @@ Community:
 * https://github.com/ClojureBridge/curriculum[ClojureBridge Curriculum]
 * https://clojuredocs.org[ClojureDocs] - community provided example repository
 * http://clojure-doc.org/[Clojure Documentation] - community-driven documentation site
-* https://cljdoc.org/[cljdoc] - a website building & hosting documentation for Clojure/Script libraries
 * http://clojurekoans.com/[Clojure Koans] (http://clojurescriptkoans.com/[online])
 * http://exercism.io/[exercism.io] - crowd-source code reviews (supports Clojure)
 * https://guide.clojure.style/[Clojure Style Guide]
@@ -72,7 +70,7 @@ Videos and presentations:
 
 * https://www.youtube.com/user/ClojureTV/videos[ClojureTV] - talks by Rich Hickey and presentations from Clojure/conj and Clojure/west
 * http://www.infoq.com/Clojure/presentations/[InfoQ Clojure Presentations] - from a variety of conferences
-* https://github.com/matthiasn/talk-transcripts[Talk transcripts] - Rich Hickey, David Nolen, Alessandra Sierra, and others
+* https://github.com/matthiasn/talk-transcripts[Talk transcripts] - Rich Hickey, David Nolen, Stuart Sierra, and others
 * http://www.parens-of-the-dead.com/[Parens of the Dead] - a screencast series writing a game from scratch with Clojure and ClojureScript
 * https://www.youtube.com/c/+practicalli[Practicalli Clojure Study Guide] - weekly live broadcasts on developing with Clojure and ClojureScript
 
@@ -102,7 +100,6 @@ Video training (commercial):
 * https://lambdaisland.com/[Lambda Island] - Screencast series about ClojureScript and Clojure
 * https://www.learnreagent.com/[Learn Reagent] - Jacek Schae
 * https://www.learnreframe.com/[Learn re-frame] - Jacek Schae
-* https://clojurehacker.com[Clojure Hacker] - build real web apps in Clojure and ClojureScript - Paul Jankowski
 
 == Conferences
 

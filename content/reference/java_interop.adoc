@@ -264,7 +264,7 @@ user=> (time (reduce + (map len2 (repeat 1000000 "asdf"))))
 4000000
 ----
 
-Once a type hint has been placed on an identifier or expression, the compiler will try to resolve any calls to methods thereupon at compile time. In addition, the compiler will track the use of any return values and infer types for their use and so on, so very few hints are needed to get a fully compile-time resolved series of calls. Note that type hints are not needed for static fields or the return values of static methods as the compiler always has that type information.
+Once a type hint has been placed on an identifier or expression, the compiler will try to resolve any calls to methods thereupon at compile time. In addition, the compiler will track the use of any return values and infer types for their use and so on, so very few hints are needed to get a fully compile-time resolved series of calls. Note that type hints are not needed for static members (or their return values!) as the compiler always has the type for statics.
 
 There is a pass:[*warn-on-reflection*] flag (defaults to false) which will cause the compiler to warn you when it can't resolve to a direct call:
 
@@ -281,7 +281,7 @@ There is a pass:[*warn-on-reflection*] flag (defaults to false) which will cause
 -> #user/foo
 ----
 
-For function return values, the type hint can be placed before the parameter vector:
+For function return values, the type hint can be placed before the arguments vector:
 
 [source,clojure]
 ----
@@ -322,7 +322,6 @@ For example, byte arrays (byte-array []) have a type of "[B".
 * bytes - A byte array
 * char - A primitive character
 * chars - A character array
-* objects - An object array
 
 [[primitives]]
 == Support for Java Primitives
@@ -418,16 +417,16 @@ At times it is necessary to have a value of a particular primitive type. These c
 * So, the simplest route to fast math is to leave the operators alone and just make sure the source literals and locals are primitive. Arithmetic on primitives yields primitives. If you've got a loop (which you probably do if you need to optimize) make sure the loop locals are primitives first - then if you accidentally are producing a boxed intermediate result you'll get an error on recur. Don't solve that error by coercing your intermediate result, instead, figure out what argument or local is not primitive.
 
 == Simple XML Support
-Included with the distribution is simple XML support, found in the src/clj/clojure/xml.clj file. All names from this file are in the clojure.xml namespace.
+Included with the distribution is simple XML support, found in the src/xml.clj file. All names from this file are in the xml namespace.
 
 ''''
 *(_parse_ source)*
 
-Parses and loads the source, which can be a File, InputStream or String naming a URI. Returns a tree of the clojure.xml/element struct-map, which has the keys :tag, :attrs, and :content. and accessor fns tag, attrs, and content.
+Parses and loads the source, which can be a File, InputStream or String naming a URI. Returns a tree of the xml/element struct-map, which has the keys :tag, :attrs, and :content. and accessor fns tag, attrs, and content.
 
 [source,clojure]
 ----
-(clojure.xml/parse "/Users/rich/dev/clojure/build.xml")
+(xml/parse "/Users/rich/dev/clojure/build.xml")
 -> {:tag :project, :attrs {:name "clojure", :default "jar"}, :content [{:tag :description, ...
 ----
 
@@ -459,14 +458,14 @@ Functions in clojure.core are automatically loaded. Other namespaces can be load
 IFn require = Clojure.var("clojure.core", "require");
 require.invoke(Clojure.read("clojure.set"));
 ----
-IFns can be passed to higher order functions, e.g. the example below passes `inc` to `map`:
+IFns can be passed to higher order functions, e.g. the example below passes plus to read:
 [source,java]
 ----
 IFn map = Clojure.var("clojure.core", "map");
 IFn inc = Clojure.var("clojure.core", "inc");
 map.invoke(inc, Clojure.read("[1 2 3]"));
 ----
-Most IFns in Clojure refer to functions. A few, however, refer to non-function data values. To access these, use `deref` instead of invoking the function:
+Most IFns in Clojure refer to functions. A few, however, refer to non-function data values. To access these, use deref instead of fn:
 [source,java]
 ----
 IFn printLength = Clojure.var("clojure.core", "*print-length*");

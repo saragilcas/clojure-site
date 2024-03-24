@@ -41,13 +41,9 @@ The `disj` ("disjoin") function is used to remove one or more elements from a se
 
 [source,clojure-repl]
 ----
-user=> players
-#{"Alice" "Kelly" "Bob"}
 user=> (disj players "Bob" "Sal")
 #{"Alice" "Kelly"}
 ----
-
-As you can see, it's fine to `disj` elements that don't exist in the set.
 
 === Checking containment
 
@@ -144,7 +140,7 @@ user=> (get scores "Angela")
 1024
 ----
 
-When the map in question is being treated as a constant lookup table, it's common to invoke the map itself, treating it as a function:
+When the map in question is being treated as a constant lookup table, its common to invoke the map itself, treating it as a function:
 
 [source,clojure-repl]
 ----

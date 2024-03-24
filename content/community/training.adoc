@@ -22,7 +22,6 @@ tel:+918040937123
 | Starweaver | Global | Clojure in a Nutshell | https://www.starweaver.com | USA: +1-646-883-1460 +
 UK: +44 20 3289 3277 +
 helpdesk@starweaver.com
-| Blumbird GmbH | Europe | All levels | https://blumbird.com/ | clojure@blumbird.com
 | Peter Taoussanis | Europe | Enterprise Clojure | https://www.taoensso.com | ptaoussanis@taoensso.com
 | Adam Bard | North America | Clojure Training | http://clojuretraining.ca | learnclojure@adambard.com
 | Mark Engelberg | North America (west coast) | Customized Training | https://www.linkedin.com/in/mark-engelberg-0a09a88a/ | mark.engelberg@gmail.com
@@ -45,10 +44,6 @@ Several courses are offered.
 | https://www.udemy.com/learning-clojure | Will teach you how to write Clojure code and structure Clojure products
 | https://learnreframe.com | Learn ClojureScript and re-frame by building CHEFFY; AirBnB for chefs.
 | https://learnreagent.com | Learn ClojureScript and Reagent by building GIGGIN an app that showcase local gigs.
-| https://learnreitit.com | Learn how to build robust REST API with Clojure by composing libraries including Reitit, Ring, Integrant, and next.jdbc.
-| https://learndatomic.com | Video course about Datomic Cloud. Including Datomic dev-local, Datomic Ions, and AWS deployment.
-| https://learnpedestal.com | Learn how to build REST API with data-driven interceptors, structuring the system with Component, and Datomic.
-| https://clojure.stream | Your one place for all things Clojure, ClojureScript, and Datalog. Courses, Podcast, Workshops, and ...
 |===
 
 === ClojureBridge

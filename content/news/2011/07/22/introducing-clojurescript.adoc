@@ -1,5 +1,5 @@
 = Introducing ClojureScript 
-Alessandra Sierra
+Stuart Sierra
 2011-07-22
 :jbake-type: post
 

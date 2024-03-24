@@ -11,107 +11,53 @@ toc::[]
 
 Welcome to Clojure!
 
-Check out <<learn/syntax#,Learn Clojure>>, <<xref/../../community/resources#,Resources>>, or <<xref/../../community/books#,Books>> to learn the language! If you have questions, you can search or ask at the official forum https://ask.clojure.org[Ask Clojure].
+== What tools do I need?
 
-== Dependencies
+Clojure is a https://clojure.org/about/dynamic[dynamic development environment] where you interact with your program while you write it, growing and adding to it while it's running. To work with Clojure you need an editor that supports evaluation in source files and structural editing (working with nested forms in addition to character editing).
 
-Clojure requires Java. Clojure officially supports Java LTS releases (currently Java 8 and Java 11), but also tries to ensure interim versions work as well. You can use any Java installation, whether it's a commercial release from Oracle or an open source version based on OpenJDK (like adoptopenjdk).
+Install these first:
 
-The Clojure tools require that either the `java` command is on the path or that the `JAVA_HOME` environment variable is set.
+* <<install_clojure#,Clojure>> provides the language, a REPL (Read Eval Print Loop), library support, and program runner
+* <<editors#,Editor>> with interactive development support
 
-== Clojure installer and CLI tools
+== How do I work with these tools?
 
-Clojure provides <<deps_and_cli#,command line tools>> that can be used to start a Clojure repl, use Clojure and Java libraries, and start Clojure programs. 
+The details will depend on your operating system and editor but the essential flow for all of them is the same:
 
-Follow these instructions to install the latest release of the `clj` and `clojure` tools:
+* Create or open a file
+* Connect a Clojure environment (aka the REPL)
+* Write Clojure code in your editor
+* Evaluate the code in your editor using the connected environment
+* Repeat!
 
-=== Installation on Mac via https://brew.sh[Homebrew]
+Learn more:
 
-Install the command line tools with `brew` from the https://github.com/clojure/homebrew-tools[clojure/tools tap]:
+* <<repl/introduction#,REPL>> - learn more about the REPL and how to use it interactively
+* <<structural_editing#,Structural editing>> - working with code as forms, not text
 
-[source,shell]
-----
-brew install clojure/tools/clojure
-----
+== How do I learn the language?
 
-If you've already installed this way in the past, you can upgrade to the latest release with:
+There are many ways to learn the Clojure language. This tutorial covers the basics:
 
-[source,shell]
-----
-brew upgrade clojure/tools/clojure
-----
+* <<learn/clojure#,Learn Clojure guide>>
 
-=== Installation on Linux
+If you'd like to work from a <<xref/../../community/books#,book>>, these are some excellent starting points:
 
-To install with the Linux script installer:
+image:https://images-na.ssl-images-amazon.com/images/I/51Bvd25CstL._SL160.jpg[Programming Clojure 3rd edition,link="https://a.co/bSxW6A6",width="130"] image:https://images-na.ssl-images-amazon.com/images/I/51dqOLcPL7L._SL160.jpg[Getting Clojure,link="https://pragprog.com/book/roclojure/getting-clojure",width="130"] image:https://images-na.ssl-images-amazon.com/images/I/6112vbQYDLL._SL160.jpg[Clojure for the Brave and True,link="https://a.co/bsviqV7",width="130"] image:https://images-na.ssl-images-amazon.com/images/I/5122uV93jfL._SL160.jpg[Living Clojure,link="https://a.co/1m2Zt4p",width="130"]
 
-1. Ensure that the following dependencies are installed: `bash`, `curl`, `rlwrap`, and `Java`.
-2. Use the `linux-install` script to download and run the install, which will create the executables `/usr/local/bin/clj`, `/usr/local/bin/clojure`, and the directory `/usr/local/lib/clojure`:
+If you'd like to try some practice problems:
 
-[source,shell]
-----
-curl -O https://download.clojure.org/install/linux-install-1.10.3.1029.sh
-chmod +x linux-install-1.10.3.1029.sh
-sudo ./linux-install-1.10.3.1029.sh
-----
+* https://4clojure.oxal.org/[4Clojure] - a large set of Clojure practice problems
+* https://exercism.io/tracks/clojure[exercism Clojure track] - larger problems with mentor support
 
-==== Custom location
+Also check out:
 
-To install to a custom location (like `/opt/infrastructure/clojure`), use the option `--prefix`:
+* <<xref/../../community/resources#_tutorials_and_learning_materials,Other learning resources>> for more options...
 
-[source,shell]
-----
-sudo ./linux-install-1.10.3.1029.sh --prefix /opt/infrastructure/clojure
-----
+== Where can I ask questions?
 
-Extend the MANPATH in `/etc/man_db.conf` to include the manual pages:
+There are many places to interact with other Clojure developers:
 
-[source]
-----
-MANPATH_MAP /opt/infrastructure/clojure/bin /opt/infrastructure/clojure/man
-----
-
-The `linux-install` script can be removed after installation.
-
-=== Installation on Windows
-
-An early release version of clj on Windows is available at https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows[clj on Windows].
-Please provide feedback on https://ask.clojure.org[Ask Clojure] or Clojurians slack in #clj-on-windows.
-
-=== Other versions
-
-See the <<xref/../../releases/tools#,changelog>> for version history and the https://github.com/clojure/homebrew-tools[Clojure tap] for info on installing older versions or newer prereleases instead.
-
-
-== Other ways to run Clojure
-
-*Local build*
-
-Most Clojure users use Clojure jars downloaded from the Maven central repository (by the tools above or other Clojure build tools). However, you can also build Clojure from source with necessary dependent jars into a single executable jar (requires Git, Java, and Maven):
-
-[source,shell]
-----
-git clone https://github.com/clojure/clojure.git
-cd clojure
-mvn -Plocal -Dmaven.test.skip=true package
-----
-
-Then start the REPL with the local jar (note this will not work with the jars in Maven as they do not include dependencies):
-
-[source,shell]
-----
-java -jar clojure.jar
-----
-
-*Try Clojure online*
-
-https://repl.it/languages/clojure[repl.it] provides a browser-based Clojure repl for interactive exploration.
-
-== Next steps
-
-* <<xref/../../community/tools#,Install editors and build tools>>
-* <<learn/syntax#,Start learning the Clojure basics>>
-* <<xref/../../community/books#,Learn Clojure from a book>>
-* <<xref/../../community/resources#,Explore Clojure communities and resources>>
-* https://ask.clojure.org[Ask questions about Clojure]
-
+* https://ask.clojure.org[Ask Clojure] [official] - Clojure Q&A and knowledge base
+* https://clojurians.net[Clojurians Slack channel] - Clojure live chat, check out #beginners, #jobs, etc
+* https://clojureverse.org[Clojureverse] - Clojure forum

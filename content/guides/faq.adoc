@@ -167,6 +167,15 @@ Design benefits of sequences:
 
 At one point, metadata was more cumbersome to use than now (the syntax for a private defn was `#^{:private true}`), and `defn-` seemed worth creating as an "easy" version. The metadata support improved and became "stackable" which allowed easier composition of independent metadata. Rather than create private variants of all the def forms, it is simply preferred to use `^:private` metadata when needed on `def` or other def forms..
 
+[[partial]]
+**<<faq#partial,Why does `partial` not see updates to vars or protocols?>>**
+
+When `partial` (or other higher-order function combinators like `comp`, `juxt`, etc) is used, any vars referenced are evaluated to function objects before `partial` is invoked, and thus it captures the value of any function vars referenced, not the var itself. For example: `(partial my-fn 100)` evaluates `my-fn` to the current function value of `#'my-fn`, then invokes `partial` with it. If the `my-fn` var is rebound in the REPL, the prior `partial` function will not "see" those changes, because it only has the function, not the var.
+
+If you are finding this to be a problem in interactive development, you can insert a layer of indirection. One option is to use the var reference `#'myfn` instead or you can use a separate `fn` or `defn` to re-include var dereferencing. Alternately, you can use a `fn` or anonymous function literal in place of the partial.
+
+In general, this is not an issue in a running app (because vars are not typically getting re-bound), but can occur in interactive REPL development.
+
 == Spec
 
 [[spec_alpha]]
@@ -353,6 +362,13 @@ If it is difficult to tell from the warning where the reflection is occurring, i
 --illegal-access=debug
 ----
 
+For example, via the Clojure CLI, using the `-J` option (or as part of `:jvm-opts` under an alias in `deps.edn`):
+
+[source]
+----
+clj -J--illegal-access=debug
+----
+
 == Design and Use
 
 [[encapsulation]]
@@ -364,17 +380,12 @@ All Clojure vars are globally available so again there is not much in the way of
 
 == Deps and CLI
 
-[[clj_alpha]]
-**<<faq#clj_alpha,Are clj and tools.deps.alpha done?>>**
-
-No. There are lots of known gaps and ideas still to implement. But it is useful now. :)
-
 [[clj_replace]]
 **<<faq#clj_replace,Is clj a replacement for lein and boot?>>**
 
-No. The clojure tools are focused on a) building classpaths and b) launching clojure programs. They do not (and will not) create artifacts, deploy artifacts, etc.
+No. The Clojure CLI is focused on a) building classpaths and b) launching clojure programs. It does not (and will not) create artifacts, deploy artifacts, etc, although they may facilitate these actions through tools and libraries.
 
-tools.deps.alpha aims to provide programmatic building blocks for dependency resolution and classpath construction. clj/clojure wraps these into a command-line form that can be used to run Clojure programs. You can compose these pieces to do many other things.
+tools.deps aims to provide programmatic building blocks for dependency resolution and classpath construction. clj/clojure wraps these into a command-line form that can be used to run Clojure programs. You can compose these pieces to do many other things.
 
 [[clj_dynamic]]
 **<<faq#clj_dynamic,Do these tools allow you to dynamically add dependencies to a running repl?>>**
@@ -427,7 +438,7 @@ https://groups.google.com/forum/#!msg/clojure/jWMaop_eVaQ/3M4gddaXDZoJ[Link] to 
 [[native]]
 **<<faq#native,Will there be a native version of Clojure in the future?>>**
 
-Frequently people ask for a "native" version of Clojure, ie one that does not rely on the JVM. ClojureScript self-hosting is one current path but probably only useful for a subset of use cases. The https://www.graalvm.org/[GraalVM] project includes standalone execution using the SubstrateVM. Native images produced with Graal start extremely fast but may have fewer opportunities to optimize performance than the full JVM.
+Frequently people ask for a "native" version of Clojure, ie one that does not rely on the JVM. ClojureScript self-hosting is one current path but probably only useful for a subset of use cases. The https://www.graalvm.org/[GraalVM] project can be used to create a standalone binary executable. Native images produced with Graal start extremely fast but may have fewer opportunities to optimize performance than the full JVM.
 
 However, neither of these is likely what people are envisioning when they ask for a "native version of Clojure", which is a version of the language that is not JVM-hosted and compiles directly to a native executable, probably via something like LLVM. Clojure leverages an enormous amount of performance, portability, and functionality from the JVM and relies heavily on things like a world-class garbage collector. Building a "Clojure native" would require a large amount of work to make a version of Clojure that was slower (probably much slower), less portable, and with significantly less functionality (as the Clojure library relies heavily on the JDK). The Clojure core team has no plans to work on this but it would be an amazing learning project for anyone and we encourage you to go for it!
 

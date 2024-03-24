@@ -129,7 +129,7 @@ It's important to know that these options exist, but don't try to adopt all of t
 [#editor-integrations]
 == Editor integrations
 
-All <<xref/../../../community/resources#_clojure_tools,major Clojure editors>> support a way of evaluating code in the REPL without leaving
+All <<xref/../../../community/tools#_editors,major Clojure editors>> support a way of evaluating code in the REPL without leaving
 the current code buffer, which reduces the amount of context switching a programmer has to do.
 Here's what it looks like (the editor used in this example is https://cursive-ide.com/userguide/repl.html[Cursive]):
 
@@ -163,7 +163,7 @@ in the namespace of the current file. Useful for experimenting in the context of
 * **Send top-level form to REPL:** evaluate the biggest expression in which the cursor is currently contained
 -typically a `(defn ...)` or `(def ...)` expression-in the namespace of the current file.
 Useful for defining or re-defining Vars in a namespace.
-* **Load the current file in the REPL.** Useful to avoid <<_working_with_libs,loading libs manually>>.
+* **Load the current file in the REPL.** Useful to avoid <<navigating_namespaces#_working_with_libs,loading libs manually>>.
 * **Switch the REPL's namespace to current file:** useful to avoid typing `(in-ns '...)`.
 * **Show evaluation inline:** displays the evaluation of the current expression next to it.
 * **Replace expression with its evaluation:** replaces the current expression in the editor with its evaluation (as printed by the REPL).
@@ -432,8 +432,8 @@ was made to assist the programmer in this task.
 **_Program state and source code should be kept in sync._** You usually want to make sure
 that your program state reflects your source code and vice-versa, but this is not automatic.
 Reloading the code is often not enough: you also need to transform the program state accordingly.
-Stuart Sierra has expounded on this problem in his article http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded[My Clojure Workflow, Reloaded]
-and his talk https://www.youtube.com/watch?v=13cmHf_kt-Q[Components Just Enough Structure].
+Alessandra Sierra has expounded on this problem in her article http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded[My Clojure Workflow, Reloaded]
+and her talk https://www.youtube.com/watch?v=13cmHf_kt-Q[Components Just Enough Structure].
 
 This has motivated the creation of **_state management libraries:_**
 

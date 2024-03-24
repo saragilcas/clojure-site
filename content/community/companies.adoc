@@ -52,12 +52,14 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * BaseFEX
 * Beanstalk
 * Beary Innovative
+* Belit
 * BeOpinion
 * bevuta
 * BGPworks
 * BillFront
 * BIMwelt Systems
 * Bloom
+* Blumbird GmbH
 * BookWell
 * Boundless Geo
 * Brainsfeed
@@ -65,6 +67,7 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * Breeze EHR
 * BrickAlloy
 * Brightin
+* Brightmotive
 * BroadbandUK
 * BroadPeak
 * Buddy
@@ -92,6 +95,8 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * Cisco
 * Citi
 * ClanHR
+* Clean Coders
+* Clean Coders Studio
 * ClearCoin
 * Climate Corp (acquired by Monsanto)
 * Clockworks
@@ -109,6 +114,7 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * Collective Digital Studio
 * Commonwealth Robotics
 * Commsor
+* Composer.Trade
 * Compute Software
 * Condense
 * Consumer Reports
@@ -177,6 +183,7 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * Funding Circle
 * Futurice
 * Fy!
+* Gaiwan
 * GetContented
 * GetSet
 * Gmaven
@@ -189,6 +196,7 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * GoOpti
 * Gracenote
 * Grammarly
+* greenlabs
 * GreenPowerMonitor
 * Groupon
 * Guaranteed Rate
@@ -203,6 +211,7 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * Heroku
 * Hexawise
 * #Homescreen
+* Hummi
 * Huobi Global
 * IB5k
 * ICM Consulting
@@ -280,8 +289,8 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * Metail
 * Metosin
 * Minoro
-* Mixpanel
 * MixRadio
+* Mobot
 * modelogiq
 * Moleque de Ideias
 * Motiva AI
@@ -365,12 +374,14 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * Reaktor
 * Red Hat
 * Red Pineapple Media
+* Redefine.io
 * Reify Health
 * RentPath
 * Ride Health
 * Rio de Janeiro Botanical Garden
 * RJMetrics
 * Rōmr
+* Roam Research
 * Rocket Fuel
 * ROKT
 * Room Key
@@ -383,7 +394,9 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * SAP
 * SAP Concur
 * Sapiens Sapiens
+* Scarlet
 * Schibsted
+* Scrintal
 * SEB (Skandinaviska Enskilda Banken)
 * Shareablee
 * Sharetribe
@@ -452,6 +465,7 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * TOYOKUMO
 * Trainline
 * T-Rank
+* Treasury Prime
 * TriOptima
 * Troy-West
 * Trucker Path
@@ -485,6 +499,7 @@ Also, check out the <<success_stories#,Clojure Success Stories>> and <<community
 * WeFarm
 * WeShop
 * Whibse
+* Whimsical
 * Whitepages
 * Wikidocs (acquired by Atlassian)
 * Wildbit

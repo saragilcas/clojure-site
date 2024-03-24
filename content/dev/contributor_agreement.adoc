@@ -7,7 +7,7 @@ Rich Hickey
 
 ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
-Following the lead of other open source projects, the Clojure project requires contributors to jointly assign their copyright on contributed code. The https://secure.na1.echosign.com/public/hostedForm?formid=95YMDL576B336E[Contributor Agreement] (CA) gives Rich Hickey and the contributor joint copyright interests in the code: the contributor retains copyrights while also granting those rights to Rich Hickey as the open source project sponsor.
+Following the lead of other open source projects, the Clojure project requires contributors to jointly assign their copyright on contributed code. The https://na1.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCSXRbJ7T5RGvmMvmpg3CzvkF_RcpWXMnGWW_W9340ztJ3-ChQ0m18hA-d06ufD8Yk*[Contributor Agreement] (CA) gives Rich Hickey and the contributor joint copyright interests in the code: the contributor retains copyrights while also granting those rights to Rich Hickey as the open source project sponsor.
 
 The CA is derived from the Oracle Contributor Agreement (OCA), used for OpenJDK, Netbeans and OpenSolaris projects and others. There is a good http://www.oracle.com/technetwork/oca-faq-405384.pdf[OCA FAQ] answering many questions.
 
@@ -15,7 +15,7 @@ The CA does not change the rights or responsibilities of the Clojure community u
 
 == Instructions for submitting the agreement
 
-* Fill out and submit the https://secure.na1.echosign.com/public/hostedForm?formid=95YMDL576B336E[Contributor Agreement] (an online e-form)
+* Fill out and submit the https://na1.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCSXRbJ7T5RGvmMvmpg3CzvkF_RcpWXMnGWW_W9340ztJ3-ChQ0m18hA-d06ufD8Yk*[Contributor Agreement] (an online e-form)
 
 [[contributors]]
 == Contributors
@@ -23,7 +23,7 @@ The CA does not change the rights or responsibilities of the Clojure community u
 See the full <<contributors#,list of contributors>> that have signed the Clojure Contributor Agreement.
 
 [[patches]]
-== Contributed patches to Clojure:
+== Accepted patches in Clojure:
 
 * Aaron Bedra
 * Aaron Cohen
@@ -47,6 +47,7 @@ See the full <<contributors#,list of contributors>> that have signed the Clojure
 * Andy Fingerhut
 * Andy Sheldon
 * Anthony Grimes
+* Arne Brasseur
 * Aspasia Beneti
 * Baishampayan Ghose
 * Ben Bader
@@ -115,12 +116,14 @@ See the full <<contributors#,list of contributors>> that have signed the Clojure
 * Johan Mena
 * John Szakmeister
 * Jonas Enlund
+* Jonathan D Johnston
 * Jozef Wagner
 * Juha Arpiainen
 * Justin Balthrop
 * Justin Kramer
 * Karsten Schmidt
 * Kevin Downey
+* Keyhan Vakil
 * Konrad Hinsen
 * Kurt Harriger
 * Kwang Yul Seo
@@ -128,6 +131,7 @@ See the full <<contributors#,list of contributors>> that have signed the Clojure
 * Lauri Pesonen
 * Lee Yen-Chin
 * Luke VanderHart
+* Marc O'Morain
 * Mark Simpson
 * Matt Revelle
 * Matthew Boston
@@ -150,6 +154,7 @@ See the full <<contributors#,list of contributors>> that have signed the Clojure
 * Oliver Caldwell
 * Paul M Bauer
 * Paul Stadig
+* Paula Gearon
 * Pepijn de Vos
 * Phil Hagelberg
 * Philip Aston
@@ -174,7 +179,7 @@ See the full <<contributors#,list of contributors>> that have signed the Clojure
 * Steve Miner
 * Steven Yi
 * Stuart Halloway
-* Stuart Sierra
+* Alessandra Sierra
 * Tassilo Horn
 * Tim Dysinger
 * Tim McCormack
